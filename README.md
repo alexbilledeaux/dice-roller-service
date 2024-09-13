@@ -50,6 +50,10 @@ Example notation: `1d20max15`
 
 Example notation: `5d10exp`
 
+#### Subscribing to Dice Rolls
+
+The API broadcasts dice rolls via socket.io. In order to recieve incoming dice roll events, it is recomended that you use the `socket.io-client` npm package in your project. Any time a user successfully rolls dice, you'll recieve an event on the `diceRoll `socket. This event will include the timestamp, sum, individual roll results, and the roll notation.
+
 ## Running the API locally
 
 If you want to run the API locally, there are two steps.
