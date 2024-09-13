@@ -41,3 +41,11 @@ AWS_REGION='example'
 AWS_ACCESS_KEY_ID='example'
 
 AWS_SECRET_ACCESS_KEY='example'
+
+## Testing the API
+
+To see test coverage and run unit tests on the API, run the following command at the project root:
+
+```
+npm test
+```

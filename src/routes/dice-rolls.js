@@ -4,7 +4,7 @@ const router = express.Router();
 
 const isTokenValid = async (token) => {
     const storedToken = await dynamoDB.getToken(token);
-    if (!storedToken || !storedToken.valid || dynamoDB.storeToken.expirationTime < Date.now()) {
+    if (!storedToken || !storedToken.valid || storedToken.expirationTime < Date.now()) {
         return false;
     }
     return true;
